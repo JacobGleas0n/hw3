@@ -1,4 +1,4 @@
-class CompaniesController < ApplicationController
+class PlacesController < ApplicationController
 
   def index
     @places = Place.all
@@ -9,7 +9,7 @@ class CompaniesController < ApplicationController
   end
 
   def new
-    @place = Company.new
+    @place = Place.new
   end
 
   def create
@@ -29,7 +29,7 @@ class CompaniesController < ApplicationController
   end
 
   def destroy
-    @place = Company.find(params["id"])
+    @place = Place.find(params["id"])
     @place.destroy
     redirect_to "/places"
   end
