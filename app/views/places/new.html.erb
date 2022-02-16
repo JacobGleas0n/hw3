@@ -1,11 +1,7 @@
-<h1>New Contact</h1>
-
 <%= form_with model: @place do |form| %>
   <p>
     <%= form.label "name" %>
     <%= form.text_field "name" %>
-
-  </p> 
-  <%= form.hidden_field "place_id" %>
+  </p>
   <%= form.submit %>
 <% end %>
