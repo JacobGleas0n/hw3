@@ -1,9 +1,11 @@
 <h1><%= @place.name %></h1>
 
 <ul>
+<% for post in @place.posts %>
   <li>
-  <h4><%= @place.post.title %></h4>
-  <p><%= @place.post.description %></p>
+  <h4><%= "#{post.title}" %></h4>
+  <p><%= "#{post.description}" %></p>
   </li>
+  <% end %>
 </ul>
 <p><a href="/posts/new">New Post</a></p>
